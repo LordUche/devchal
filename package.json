@@ -1,0 +1,40 @@
+{
+  "name": "devchal",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.com/LordUche/devchal.svg?branch=master)](https://travis-ci.com/LordUche/devchal) [![Coverage Status](https://coveralls.io/repos/github/LordUche/devchal/badge.svg?branch=master)](https://coveralls.io/github/LordUche/devchal?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/2d148ee735eb0dbeaa5f/maintainability)](https://codeclimate.com/github/LordUche/devchal/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/2d148ee735eb0dbeaa5f/test_coverage)](https://codeclimate.com/github/LordUche/devchal/test_coverage)",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon src/app.js --exec babel-node",
+    "serve": "node dist/app.js",
+    "test": "nyc --reporter=html --reporter=text mocha --timeout=3000 --require babel-register ./test/ --exit",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LordUche/devchal.git"
+  },
+  "author": "Uchenna A. Iheanacho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LordUche/devchal/issues"
+  },
+  "homepage": "https://github.com/LordUche/devchal#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "request": "^2.88.0"
+  }
+}
