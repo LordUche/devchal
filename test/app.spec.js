@@ -4,8 +4,7 @@ const chaiHttp = require('chai-http');
 
 chai.use(chaiHttp);
 const expect = chai.expect;
-const PORT = process.env.PORT || 3000;
-const base = `https://afternoon-crag-14051.herokuapp.com:${PORT}`;
+const base = `https://afternoon-crag-14051.herokuapp.com`;
 
 describe('GET /red-flags', () => {
   it('should get all red-flags', (done) => {
